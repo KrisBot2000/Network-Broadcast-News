@@ -9,14 +9,12 @@ let guestId = 0;
 
 const server = net.createServer(function(socket) {
 
-  console.log(socket);
+
   guestId++;
 
   socket.name = "Munchie" + guestId;
 
   console.log(`${socket.name} has joined the chat`);
-
-  socket.write(`Welcome ${socket.name} to Kristin's chat room that she created all by herself!`);
 
   sockets.push(socket);
 
